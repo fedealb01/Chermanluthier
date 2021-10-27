@@ -1,0 +1,491 @@
+*{
+    /*El * es universal... todo lo que este en el HTML tiene ese formato*/
+    margin: 0;
+    /* seria un margen del body para afuera*/
+    padding: 0;
+    /*margin: 2px;*/ 
+    /* seria un margen del marco a los elementos internos*/
+    /*padding: 2px;*/ 
+    /* fondo */
+}
+
+#cherman{
+    text-align: center;
+}
+
+#google{
+    /* Copio y pego de google fonts y agrego el link al head */
+    font-family: 'Architects Daughter', cursive;
+    font-family: 'Pacifico', cursive;
+}
+
+.servicios{
+   /* Copio y pego de google fonts y agrego el link al head */
+   font-family: 'Architects Daughter', cursive;
+   font-family: 'Pacifico', cursive;
+}
+.servicios1{
+    display: block;
+    text-decoration: none;
+    /* eliminar los puntitos de la lista */
+    list-style: none; 
+}
+
+.nav { 
+    display: inline-flex; 
+    /* Block muestra uno bajo el otro */
+    /* Flex direccion le digo que el eje de navegación sea vertical si es row digo que sea horizontal.. pero igual por defecto es horizontal con display flex o inline-flex */
+    /* flex-flow: row wrap; remmplaza a las dos de abajo.... */
+    /* flex direction: Row aparece a la der y row-reverse aparece a la izq */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-content: stretch;
+    /* font-weight: espesor-grosor de la letra bold, 200, 400, etc */
+    font-weight: bold;
+    /* la barra de NAV me ocupa el 100% de la pantalla */
+    width: 100%;
+    /* Ancho si achico la pantalla se mantiene en un 25% si le pongo un valor fijo en px se mantiene siempre fijo por mas que agrande o achique la pantalla*/
+    
+    /* Para que no me decore con nada los hipervinculos */
+    text-decoration: none;
+    padding: 0px; /*altura del fondo gris*/
+    /*border-radius: 5px; para que tenga un contorno redondeado*/
+    font-size:20px; 
+    /*tamaño de la fuente unidad de medida px " este es el Cherman"*/
+    line-height: 40px;
+}
+.item{
+    color: white;
+    text-decoration: none;
+    margin: 0px 20px;
+}
+
+#error{
+    color: red;
+}
+
+
+/* Página de inicio -------------------------------------------------------- */
+.fotoinicio {
+    margin:10px;
+    border-radius:10px;
+    border: 1px solid #999;
+    padding:13px;
+    width:100%;
+    height:400px;
+    background-size: cover;
+}
+.contenedor1{
+    width: 95%;
+    /*max-width: 1000px;*/
+    margin: 20px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "header header header"
+                         "presentacion presentacion servicios"
+                         "fotoinicio fotoinicio fotoinicio"
+                         "footer footer footer";
+}
+.contenedor1 .header,
+.contenedor1 .presentacion,
+.contenedor1 .fotoinicio,
+.contenedor1 .servicios
+.contenedor1 .footer {
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+}
+.contenedor1 .header {
+    text-align: right;
+    background: rgba(35, 128, 7, 0.507);
+    color: white;
+    grid-area: header;
+}
+.contenedor1 .presentacion {
+    text-align: justify;
+    background: gray;
+    color: black;
+    grid-area: presentacion;
+    transition-property: background-color;
+    transition-duration: 2s;
+}
+.presentacion:hover{
+    background-color:rgba(35, 128, 7, 0.507);
+}
+.contenedor1 .servicios {
+    text-align: center;
+    background: gray;
+    color: black;
+    grid-area: servicios;
+    transition-property: background-color;
+    transition-duration: 2s;
+}
+.servicios:hover{
+    background-color:rgba(35, 128, 7, 0.507);
+}
+.contenedor1 .fotoinicio {
+    text-align: right;
+    background: white;
+    color: white;
+    grid-area: fotoinicio;
+}
+
+.contenedor1 .footer {
+    text-align: center;
+    background: rgba(35, 128, 7, 0.507);
+    color: white;
+    grid-area: footer;
+}
+.socialm { 
+    text-decoration: none;
+}
+
+/* Página de contacto ---------------------------------------------------- */
+
+.contenedor{
+    width: 95%;
+    /*max-width: 1000px;*/
+    margin: 20px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "header header header"
+                         "form form form"
+                         "contact contact contact"
+                         "ubicacion1-1 ubicacion2-2 ubicacion3-3"
+                         "footer footer footer";
+}
+
+.contenedor .header,
+.contenedor .form,
+.contenedor .contact,
+.contenedor .ubicacion1,
+.contenedor .ubicacion2,
+.contenedor .ubicacion3,
+.contenedor .footer {
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+}
+.contenedor .header {
+    text-align: right;
+    background: rgba(35, 128, 7, 0.507);
+    color: white;
+    grid-area: header;
+}
+.contenedor .form {
+    background: white;
+    color: black;
+    grid-area: form;
+}
+.contenedor .contact {
+    background: rgba(35, 128, 7, 0.507);
+    color: black;
+    grid-area: contact;
+}
+.contenedor .ubicacion1 {
+    background: white;
+    color: black;
+    grid-area: ubicacion1-1;
+}
+.contenedor .ubicacion2 {
+    background: white;
+    color: black;
+    grid-area: ubicacion2-2;
+}
+.contenedor .ubicacion3 {
+    background: white;
+    color: black;
+    grid-area: ubicacion3-3;
+}
+.contenedor .footer {
+    text-align: center;
+    background: rgba(35, 128, 7, 0.507);
+    color: white;
+    grid-area: footer;
+}
+
+/* Página de Productos ------------------------------------------------ */
+
+.producto {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.contenedor2{
+    width: 95%;
+    /*max-width: 1000px;*/
+    margin: 20px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(10, auto);
+    grid-template-areas: "header header header header"
+                         "coraln coraln coraln coraln"
+                         "coraln1 coraln2 coraln3 coraln4"
+                         "valencia valencia valencia valencia"
+                         "valencia1 valencia2 valencia3 valencia4"
+                         "india india india india"
+                         "india1 india2 india3 india4"
+                         "emmaBass emmaBass emmaBass emmaBass"
+                         "emmaBass1 emmaBass2 emmaBass3 emmaBass4"
+                         "footer footer footer footer";
+}
+.contenedor2 .header,
+.contenedor2 .coraln,
+.contenedor2 .coraln1,
+.contenedor2 .coraln2,
+.contenedor2 .coraln3,
+.contenedor2 .coraln4,
+.contenedor2 .valencia,
+.contenedor2 .valencia1,
+.contenedor2 .valencia2,
+.contenedor2 .valencia3,
+.contenedor2 .valencia4,
+.contenedor2 .valencia,
+.contenedor2 .valencia1,
+.contenedor2 .valencia2,
+.contenedor2 .valencia3,
+.contenedor2 .valencia4,
+.contenedor2 .emmaBass,
+.contenedor2 .emmaBass1,
+.contenedor2 .emmaBass2,
+.contenedor2 .emmaBass3,
+.contenedor2 .emmaBass4,
+.contenedor2 .footer {
+    background-color: white;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.contenedor2 .header {
+    text-align: right;
+    background: rgba(35, 128, 7, 0.507);
+    color: white;
+    grid-area: header;
+}
+.contenedor2 .coraln {
+    background: white;
+    color: black;
+    grid-area: coraln;
+}
+.contenedor2 .coraln1 {
+    background: white;
+    color: black;
+    grid-area: coraln1;
+}
+.contenedor2 .coraln2 {
+    background: white;
+    color: black;
+    grid-area: coraln2;
+}
+.contenedor2 .coraln3 {
+    background: white;
+    color: black;
+    grid-area: coraln3;
+}
+.contenedor2 .coraln4 {
+    background: white;
+    color: black;
+    grid-area: coraln4;
+}
+.contenedor2 .valencia {
+    background: white;
+    color: black;
+    grid-area: valencia;
+}
+.contenedor2 .valencia1 {
+    background: white;
+    color: black;
+    grid-area: valencia1;
+}
+.contenedor2 .valencia2 {
+    background: white;
+    color: black;
+    grid-area: valencia2;
+}
+.contenedor2 .valencia3 {
+    background: white;
+    color: black;
+    grid-area: valencia3;
+}
+.contenedor2 .valencia4 {
+    background: white;
+    color: black;
+    grid-area: valencia4;
+}
+.contenedor2 .india {
+    background: white;
+    color: black;
+    grid-area: india;
+}
+.contenedor2 .india1 {
+    background: white;
+    color: black;
+    grid-area: india1;
+}
+.contenedor2 .india2 {
+    background: white;
+    color: black;
+    grid-area: india2;
+}
+.contenedor2 .india3 {
+    background: white;
+    color: black;
+    grid-area: india3;
+}
+.contenedor2 .india4 {
+    background: white;
+    color: black;
+    grid-area: india4;
+}
+.contenedor2 .emmaBass {
+    background: white;
+    color: black;
+    grid-area: emmaBass;
+}
+.contenedor2 .emmaBass1 {
+    background: white;
+    color: black;
+    grid-area: emmaBass1;
+}
+.contenedor2 .emmaBass2 {
+    background: white;
+    color: black;
+    grid-area: emmaBass2;
+}
+.contenedor2 .emmaBass3 {
+    background: white;
+    color: black;
+    grid-area: emmaBass3;
+}
+.contenedor2 .emmaBass4 {
+    background: white;
+    color: black;
+    grid-area: emmaBass4;
+}
+.contenedor2 .footer {
+    text-align: center;
+    background: rgba(35, 128, 7, 0.507);
+    color: white;
+    grid-area: footer;
+}
+
+/* MEDIA QUERIES - Breakpoints - Responsive */
+/* Extra small devices (phones, 600px and down) */
+@media screen and (max-width: 600px) {
+    /* Página de contacto */
+    .contenedor1{
+        grid-template-areas: "header header header"
+                             "presentacion presentacion presentacion"
+                             "servicios servicios servicios"
+                             "fotoinicio fotoinicio fotoinicio"
+                             "footer footer footer";
+    }
+    .contenedor {
+        grid-template-areas: "header header header"
+                             "form form form"
+                             "contact contact contact"
+                             "ubicacion1-1 ubicacion1-1 ubicacion1-1"
+                             "ubicacion2-2 ubicacion2-2 ubicacion2-2"
+                             "ubicacion3-3 ubicacion3-3 ubicacion3-3"
+                             "footer footer footer";
+    }
+    .contenedor2 {
+        grid-template-areas: "header header header header"
+                             "coraln coraln coraln coraln"
+                             "coraln1 coraln1 coraln1 coraln1"
+                             "coraln2 coraln2 coraln2 coraln2"
+                             "coraln3 coraln3 coraln3 coraln3"
+                             "coraln4 coraln4 coraln4 coraln4"
+                             "valencia valencia valencia valencia"
+                             "valencia1 valencia1 valencia1 valencia1"
+                             "valencia2 valencia2 valencia2 valencia2"
+                             "valencia3 valencia3 valencia3 valencia3"
+                             "valencia4 valencia4 valencia4 valencia4"
+                             "india india india india"
+                             "india1 india1 india1 india1"
+                             "india2 india2 india2 india2"
+                             "india3 india3 india3 india3"
+                             "india4 india4 india4 india4"
+                             "emmaBass emmaBass emmaBass emmaBass"
+                             "emmaBass1 emmaBass1 emmaBass1 emmaBass1"
+                             "emmaBass2 emmaBass2 emmaBass2 emmaBass2"
+                             "emmaBass3 emmaBass3 emmaBass3 emmaBass3"
+                             "emmaBass4 emmaBass4 emmaBass4 emmaBass4"
+                             "footer footer footer footer";
+
+    }   
+}
+/* Medium devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .contenedor2 {
+        grid-template-areas: "header header header header"
+                             "coraln coraln coraln coraln"
+                             "coraln1 coraln1 coraln2 coraln2"
+                             "coraln3 coraln3 coraln4 coraln4"
+                             "valencia valencia valencia valencia"
+                             "valencia1 valencia1 valencia2 valencia2"
+                             "valencia3 valencia3 valencia4 valencia4"
+                             "india india india india"
+                             "india1 india1 india2 india2"
+                             "india3 india3 india4 india4"
+                             "emmaBass emmaBass emmaBass emmaBass"
+                             "emmaBass1 emmaBass1 emmaBass2 emmaBass2"
+                             "emmaBass3 emmaBass3 emmaBass4 emmaBass4"
+                             "footer footer footer footer";
+
+    }
+    .contenedor {
+        grid-template-areas: "header header header"
+                             "form form form"
+                             "contact contact contact"
+                             "ubicacion1-1 ubicacion1-1 ubicacion1-1"
+                             "ubicacion2-2 ubicacion2-2 ubicacion2-2"
+                             "ubicacion3-3 ubicacion3-3 ubicacion3-3"
+                             "footer footer footer";
+    }   
+}
+/* Large devices (laptops/desktops, 1324px and up) */
+@media only screen and (min-width: 1324px) {
+    .contenedor1{
+        grid-template-areas: "header header header"
+                             "presentacion presentacion servicios"
+                             "fotoinicio fotoinicio fotoinicio"
+                             "footer footer footer";
+    }
+    .contenedor {
+        grid-template-areas: "header header header"
+                             "form form form"
+                             "contact contact contact"
+                             "ubicacion1-1 ubicacion2-2 ubicacion3-3"
+                             "footer footer footer";
+    }
+    .contenedor2 {
+        grid-template-areas: "header header header header"
+                             "coraln coraln coraln coraln"
+                             "coraln1 coraln2 coraln3 coraln4"
+                             "valencia valencia valencia valencia"
+                             "valencia1 valencia2 valencia3 valencia4"
+                             "india india india india"
+                             "india1 india2 india3 india4"
+                             "emmaBass emmaBass emmaBass emmaBass"
+                             "emmaBass1 emmaBass2 emmaBass3 emmaBass4"
+                             "footer footer footer footer";
+    }  
+}
+
+   
+
+
+
+
+
+
+
+
+
